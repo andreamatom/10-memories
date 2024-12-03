@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Friends. 10 Languages. 10 Memories.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Typefaces -->
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'cfq7chn',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement,
+            t = setTimeout(function() {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout),
+            tk = d.createElement("script"),
+            f = false,
+            s = d.getElementsByTagName("script")[0],
+            a;
+
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config);
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s);
+        })(document);
+
+        (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon_studio1ebsite.png">
+</head>
+
+<body id="memory-8" data-memory="8" class="memory-page-8">
+    <div class="container">
+        <!-- Left Vertical Bar -->
+        <a href="memory7.html" class="vertical-bar left-bar">
+            MEMORY 7
+        </a>
+        
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header Section -->
+            <header class="custom-header">
+                <div class="header-section left">
+                  <a href="index.html"><span class="header-link"> 10 FRIENDS. 10 LANGUAGES. 10 MEMORIES.</span></a> 
+                </div>
+                <div class="header-section right">
+                  <a href="transcripts.html" class="header-link">INDEX</a>
+                </div>
+            </header>
+        </div>
+
+        <!-- Centered Story Text -->
+        <div class="layout-wrapper">
+        <div class="center-text">
+          <div class="title-container">
+            <p>
+              <span class="title">MEMORY 8</span class="nbsp">&nbsp;&nbsp;
+              <span class="title2">Na Komandosa</span class="nbsp">&nbsp;&nbsp;
+              <span class="title"> BY</span class="nbsp">&nbsp;&nbsp;
+              <span class="title2">Emilia Miękisz</span class="nbsp">&nbsp;&nbsp;
+              <span class="title"> IN</span class="nbsp">&nbsp;&nbsp;
+              <span class="title2">Polish</span>
+            </p>
+        </div>
+          <p id="sentence" class="main-language"></p>
+          <p id="translation" class="secondary-language"></p>
+      </div>
+      </div>
+      </div>
+
+        <!-- Right Vertical Bar -->
+
+    <a href="memory9.html" class="vertical-bar right-bar">
+        MEMORY 9
+    </a>
+
+    <div id="subtitle-images-container" class="subtitle-images-container"></div>
+    
+        <!-- Audio Player -->
+        <div class="audio-player">
+          <div class="player-row">
+            <button id="play-button" class="play-button">▶</button>
+            <div class="progress-container">
+              <input type="range" id="seekBar" value="0" min="0" step="1" class="seek-bar">
+              <div id="progress-bar" class="progress-bar"></div>
+              <div class="time-container">
+                <span id="elapsed-time" class="time">0:00</span>
+                <span id="total-duration" class="time">0:00</span>
+              </div>
+            </div>
+          </div>
+          <audio id="audio" controls style="display: none;" src="emilia.mp3"></audio>
+        </div>
+        <div class="image-container">
+            <img id="subtitle-image" src="" alt="Subtitle Image" style="display: none;" />
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

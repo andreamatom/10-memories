@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Friends. 10 Languages. 10 Memories.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="https://use.typekit.net/cfq7chn.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/cfq7chn.css"></noscript>
+
+    
+    <!-- Typefaces -->
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'cfq7chn',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement,
+            t = setTimeout(function() {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout),
+            tk = d.createElement("script"),
+            f = false,
+            s = d.getElementsByTagName("script")[0],
+            a;
+
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config);
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s);
+        })(document);
+
+        (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon_studio1ebsite.png">
+
+    <style>
+
+        body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  font-family: 'cofo-sans-mono-variable', sans-serif;
+  background-color: #ebebf0;
+}
+
+        html, body {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Remove any default margins */
+  }
+    
+
+/* Monitor */
+@media (max-width: 3000px) {
+
+  .large-text {
+          font-size: 4.3rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .small-text {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+
+  #image-preview {
+  position: absolute;
+  width: 31.25rem; /* Adjust width of the preview image */
+  height: 15.625rem; 
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 7vw;
+}
+
+
+body.memory-index .vertical-bar:hover {
+    background-color: #4940ff; 
+    color: white;
+}
+
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #4940ff;
+  color: white;
+  padding: 1.25rem;
+  position: absolute; /* Allows overlapping */
+  top: 60vh; /* Aligns it to the top of its parent */
+  left: 31.5vw; /* Aligns it to the left of its parent */
+  width: 90%;
+  max-width: 25vw;
+  z-index: 1000; /* Ensures it appears above other content */
+  display: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: 1.5em;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align text and close button vertically */
+  margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+  font-size: 1.5rem; /* Adjust font size for "Colophon" */
+  margin: 0; /* Remove default margin */
+}
+
+.close-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.colophon {
+    font-size: 1em; /* Adjust as needed */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+
+}
+
+/* PC */
+@media (max-width: 1800px) {
+
+  .large-text {
+          font-size: 4.1rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .small-text {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+
+  #image-preview {
+  position: absolute;
+  width: 31.25rem; /* Adjust width of the preview image */
+  height: 15.625rem; 
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 7vw;
+}
+
+
+body.memory-index .vertical-bar:hover {
+    background-color: #4940ff; 
+    color: white;
+}
+
+    
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #4940ff;
+  color: white;
+  padding: 1.25rem;
+  position: absolute; /* Allows overlapping */
+  top: 62vh; /* Aligns it to the top of its parent */
+  left: 57.5vw; /* Aligns it to the left of its parent */
+  width: 90%;
+  max-width: 30vw;
+  z-index: 1000; /* Ensures it appears above other content */
+  display: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: 1.5em;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align text and close button vertically */
+  margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+  font-size: 1.5rem; /* Adjust font size for "Colophon" */
+  margin: 0; /* Remove default margin */
+}
+
+.close-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.colophon {
+    font-size: 1em; /* Adjust as needed */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+    }
+
+
+/* iPad Pro */
+    @media (max-width: 1024px) {
+      .large-text {
+          font-size: 3rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .small-text {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 20rem; /* Adjust width of the preview image */
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 10vw;
+}
+
+
+body.memory-index .vertical-bar:hover {
+    background-color: #4940ff; 
+    color: white;
+}
+
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #4940ff;
+  color: white;
+  padding: 1.25rem;
+  position: absolute; /* Allows overlapping */
+  top: 61vh; /* Aligns it to the top of its parent */
+  left: 58vw; /* Aligns it to the left of its parent */
+  width: 90%;
+  max-width: 30vw;
+  z-index: 1000; /* Ensures it appears above other content */
+  display: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: 1.5em;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align text and close button vertically */
+  margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+  font-size: 1.5rem; /* Adjust font size for "Colophon" */
+  margin: 0; /* Remove default margin */
+}
+
+.close-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.colophon {
+    font-size: 1em; /* Adjust as needed */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+        }
+    
+/* iPad Air */
+@media (max-width: 820px) {
+  .large-text {
+          font-size: 2.4rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .small-text {
+          font-size: 1rem;
+          line-height: 1.4;
+          color: black;
+          margin: 0;
+        }
+
+
+        #image-preview {
+  position: absolute;
+  width: 20rem; /* Adjust width of the preview image */
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 12vw;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #4940ff;
+  color: white;
+  padding: 1.25rem;
+  position: absolute; /* Allows overlapping */
+  top: 47.5vh; /* Aligns it to the top of its parent */
+  left: 24vw; /* Aligns it to the left of its parent */
+  width: 90%;
+  max-width: 30vw;
+  z-index: 1000; /* Ensures it appears above other content */
+  display: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: 1.5em;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align text and close button vertically */
+  margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+  font-size: 1.5rem; /* Adjust font size for "Colophon" */
+  margin: 0; /* Remove default margin */
+}
+
+.close-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.colophon {
+    font-size: 1em; /* Adjust as needed */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+}
+
+/* iPad Mini */
+@media (max-width: 768px) {
+  .large-text {
+          font-size: 2.2rem;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .small-text {
+          font-size: 1rem;
+          line-height: 1.4;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 20rem; /* Adjust width of the preview image */
+  height: 10rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 12vw;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #4940ff;
+  color: white;
+  padding: 1.25rem;
+  position: absolute; /* Allows overlapping */
+  top: 39vh; /* Aligns it to the top of its parent */
+  left: 57vw; /* Aligns it to the left of its parent */
+  width: 90%;
+  max-width: 30vw;
+  z-index: 1000; /* Ensures it appears above other content */
+  display: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: 1.5em;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align text and close button vertically */
+  margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+  font-size: 1.5rem; /* Adjust font size for "Colophon" */
+  margin: 0; /* Remove default margin */
+}
+
+.close-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.colophon {
+    font-size: 1em; /* Adjust as needed */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+}
+
+/* Phone 480 */
+@media (max-width: 480px) {
+  .large-text {
+          font-size: 1.7rem;
+          line-height: 1.6;
+          margin-top: 12rem;
+        }
+
+        .small-text {
+          font-size: 0.8rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 10rem; /* Adjust width of the preview image */
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 15vw;
+}
+
+body {
+    overflow-y: scroll; /* Always shows a vertical scrollbar */
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.info-box {
+    display: none;
+}
+
+.info-header {
+  display: none;
+}
+
+.info-header p {
+  display: none;
+}
+
+.close-box { 
+  display: none;
+}
+
+.colophon {
+    display: none;
+  }
+
+}
+
+
+/* Phone 412 */
+@media (max-width: 412px) {
+  .large-text {
+          font-size: 1.7rem;
+          line-height: 1.6;
+          margin-top: 20rem;
+        }
+
+        .small-text {
+          font-size: 0.8rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 10rem; /* Adjust width of the preview image */
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 15vw;
+}
+
+body {
+    overflow-y: scroll; /* Always shows a vertical scrollbar */
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.info-box {
+    display: none;
+}
+
+.info-header {
+  display: none;
+}
+
+.info-header p {
+  display: none;
+}
+
+.close-box { 
+  display: none;
+}
+
+.colophon {
+    display: none;
+  }
+
+
+}
+
+
+/* Phone 412 */
+@media (max-width: 390px) {
+  .large-text {
+          font-size: 1.7rem;
+          line-height: 1.6;
+          margin-top: 27rem;
+        }
+
+        .small-text {
+          font-size: 0.8rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 10rem; /* Adjust width of the preview image */
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 15vw;
+}
+
+body {
+    overflow-y: scroll; /* Always shows a vertical scrollbar */
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.info-box {
+    display: none;
+}
+
+.info-header {
+  display: none;
+}
+
+.info-header p {
+  display: none;
+}
+
+.close-box { 
+  display: none;
+}
+
+.colophon {
+    display: none;
+  }
+
+
+}
+
+
+/* Phone 375 */
+@media (max-width: 375px) {
+  .large-text {
+          font-size: 1.3rem;
+          line-height: 1.6;
+          margin-top: 22rem;
+        }
+
+        .small-text {
+          font-size: 0.8rem;
+          line-height: 1.6;
+          color: black;
+          margin: 0;
+        }
+
+        #image-preview {
+  position: absolute;
+  width: 10rem; /* Adjust width of the preview image */
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with the image */
+  z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+    background-color: #dcf9da;
+    letter-spacing: 0.08rem;
+    width: 15vw;
+}
+
+body {
+    overflow-y: scroll; /* Always shows a vertical scrollbar */
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.info-box {
+    display: none;
+}
+
+.info-header {
+  display: none;
+}
+
+.info-header p {
+  display: none;
+}
+
+.close-box { 
+  display: none;
+}
+
+.colophon {
+    display: none;
+  }
+
+
+}
+
+
+        .content-container {
+    max-width: 90vw; /* Adjust the width as needed */
+    margin: left; /* Centers the content */
+    padding:calc(0.625rem + 0.2em) 1.875rem 0.625rem 1.875rem;
+  }
+
+
+        .divider {
+    border: none;
+    border-top:  0.125rem solid black;
+    margin: 5vh 0; /* Add vertical spacing around the line */
+    max-width: 100%; /* Keeps the divider within the container */
+  }
+    
+      
+
+        .clickable-text {
+  color: black; /* Default color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s ease, transform 0.2s ease; /* Smooth hover transition */
+  cursor: pointer; /* Pointer cursor for clickable text */
+}
+
+.clickable-text:hover {
+  color: #4940ff; /* Change to purple on hover */
+  transform: scale(1.2); /* Slightly enlarge the text on hover */
+  text-decoration: underline; /* Add underline for visual emphasis */
+}
+
+        sup {
+    font-size: 0.6em; /* Adjust as needed */
+    vertical-align: top; /* Ensures proper positioning */
+    color: #4940ff;
+    cursor: pointer; 
+  }
+
+
+  .colophon:hover {
+    transform: scale(1.2);
+  }
+
+  sup:hover {
+  transform: scale(1.2); /* Slightly enlarge the element to indicate hover */
+}
+
+
+/* Hover effect for superscript numbers */
+.hover-image:hover ~ #image-preview {
+  display: block; /* Show the image preview */
+}
+
+
+
+      </style>
+</head>
+
+<body class="memory-index" id="memory-index" data-memory="index">
+    <div class="container">
+        <div id="image-preview"></div>
+        
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header Section -->
+            <header class="custom-header">
+                <div class="header-section left">
+                  <a href="index.html"><span class="header-link"> 10 FRIENDS. 10 LANGUAGES. 10 MEMORIES.</span></a> 
+                </div>
+                <div class="header-section right">
+                  <a href="transcripts.html" class="header-link">INDEX</a>
+                </div>
+            </header>
+        </div>
+
+        <div class="content-container">
+            <div class="large-text">
+                <a href="memory1.html" class="clickable-text">Meine Mutter ist eine Ermöglicherin</a><sup class="hover-image" data-image="kim1.jpg">1</sup>,<br>
+                <a href="memory2.html" class="clickable-text">Pfungwa dzeGymnast Mudiki</a><sup class="hover-image" data-image="tanaka1.jpg">2</sup>,<br>
+                <a href="memory3.html" class="clickable-text">네이트 버튼</a><sup class="hover-image" data-image="thea1.jpg">3</sup>,  
+                <a href="memory4.html" class="clickable-text"><span style="font-family: 'Noto Sans Gujarati', sans-serif;">પડીકુ</a></span><sup class="hover-image" data-image="saachi2.jpg">4</sup>,  
+                <a href="memory5.html" class="clickable-text"><span style="font-family: 'Noto Sans', sans-serif;">Неприятное воспоминание<br>из детсада</a></span><sup class="hover-image" data-image="tonia2.jpg">5</sup>,
+                <a href="memory6.html" class="clickable-text">Auto de Payasos</a><sup class="hover-image" data-image="flor1.jpg">6</sup>,<br>
+                <a href="memory7.html" class="clickable-text"><span style="font-family: 'Noto Sans SC', sans-serif;">T夜里骑车卖馄饨的人</a></span><sup class="hover-image" data-image="jo2.jpg">7</sup>,  
+                <a href="memory8.html" class="clickable-text"> Na Komandosa</a><sup class="hover-image" data-image="emilia2.jpg">8</sup>
+              <br><a href="memory9.html" class="clickable-text">Cachorros e Sonhos</a><sup class="hover-image" data-image="babi1.jpg">9</sup>, 
+              <a href="memory10.html" class="clickable-text">Title in Tagalog</a><sup class="hover-image" data-image="clara1.jpg">10</sup>
+       
+              <hr class="divider">
+
+              <div class="small-text">
+                Expressing a story in one’s native language often carries a depth of emotional resonance that is difficult to translate. This space is dedicated to deep listening and the preservation of linguistic authenticity, serving as a vessel for voices and childhood memories. Here, stories are shared in their purest form shaped by one’s native tongue. While much can be lost in translation, this project seeks to celebrate unity through diversity. We embrace tonal shifts, nuances, and the richness of expression, fostering deeper connections and understanding as we uncover and share childhood experiences from around the world.
+              <span class="colophon">[+]</span>
+              </div>
+            </div>
+
+            <div class="info-box" id="info-box">
+              <div class="info-header">
+                <p>Colophon</p>
+                <span class="close-box" id="close-box">[x]</span>
+              </div>
+              <p>
+                Set In<br>CoFo Sans Mono VF, Freight Big Pro, Noto-Sans 
+                <br><br>
+                Design and Code<br>Andrea Mato © 2024
+                <br><br>
+                Special Thanks<br>
+                Kimberly Duck, Tanaka Mapondera, Thea Kim, Saachi Mehta, Tonia Zhang, 
+                Florencia Villa, Jo Zixuan, Emilia Miękisz, Barbara Cutlak, 
+                Clara Cayosa, Bethany Johns, Ramon Tejada, Gabriel Drozdov
+              </p>
+            </div>
+
+        <!-- Right Vertical Bar -->
+        <a href="memory1.html" class="vertical-bar right-bar">
+            LISTEN TO MEMORIES
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
