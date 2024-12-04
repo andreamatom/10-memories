@@ -408,7 +408,7 @@ body.memory-page-10 .vertical-bar:hover {
         justify-content: center; /* Center-align images */
         align-items: center;
         gap: 2vw; /* Space between images */
-        margin-top: 73vh; /* Adjust spacing above the progress bar */
+        margin-top: 71vh; /* Adjust spacing above the progress bar */
         width: 80%; /* Match the width of the progress bar */
         position: absolute;
         z-index: 5; 
@@ -623,7 +623,7 @@ a {
 
 
 
-    @media (max-width: 3000px) {
+    @media (max-width: 3024px) {
 .vertical-bar {
     width: 6vw; /* Width of the vertical bar */
     height: 100vh; /* Full viewport height */
@@ -633,7 +633,7 @@ a {
     color: black;
     font-family: "cofo-sans-mono-variable", sans-serif;
     font-variation-settings: "wght" 400;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     writing-mode: vertical-rl; /* Vertical text (right-to-left) */
     text-orientation: mixed; /* Ensures letters are upright */
@@ -790,7 +790,7 @@ a {
 .center-text .title {
     font-family: "cofo-sans-mono-variable", sans-serif;
     font-weight: 400; 
-    font-size: 1.325rem;
+    font-size: 1.4rem;
     color: black; 
     margin-bottom:  1.25rem; /* Add space between title and main text */
     display: inline;
@@ -1323,7 +1323,7 @@ a {
 
 
 /* Progress Bar Container */
-@media (max-width: 3000px) {
+@media (max-width: 3024px) {
 
 
 .play-button {
@@ -1336,6 +1336,8 @@ a {
     align-items: center;
     justify-content: center;
     border: none; /* No border */
+    margin: 0;
+    padding: 0;
 }
 
 .progress-container {
@@ -1467,7 +1469,7 @@ a {
 .transcript-button {
     display: grid;
     grid-template-columns: 1fr 3fr 2fr 2fr; /* Match columns with header */
-    padding: 0.9375rem  1.25rem;
+    padding: 1 1.5rem;
     width: 100%;
     font-family: "cofo-sans-mono-variable", sans-serif;
     font-variation-settings: "wght" 400;
@@ -1480,7 +1482,7 @@ a {
 }
 
 .button-item {
-    padding: 0.3125rem 0.625rem;
+    padding: 1rem 0.625rem;
     text-align: left; /* Align text within each column */
 }
 
