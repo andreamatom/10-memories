@@ -5,43 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10 Friends. 10 Languages. 10 Memories.</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preload" href="https://use.typekit.net/cfq7chn.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://use.typekit.net/cfq7chn.css"></noscript>
-
     
     <!-- Typefaces -->
     <script>
-        (function(d) {
-            var config = {
-                kitId: 'cfq7chn',
-                scriptTimeout: 3000,
-                async: true
-            },
-            h = d.documentElement,
-            t = setTimeout(function() {
-                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-            }, config.scriptTimeout),
-            tk = d.createElement("script"),
-            f = false,
-            s = d.getElementsByTagName("script")[0],
-            a;
+         /* noto sans*/
+       (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
 
-            h.className += " wf-loading";
-            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-            tk.async = true;
-            tk.onload = tk.onreadystatechange = function() {
-                a = this.readyState;
-                if (f || a && a != "complete" && a != "loaded") return;
-                f = true;
-                clearTimeout(t);
-                try {
-                    Typekit.load(config);
-                } catch (e) {}
-            };
-            s.parentNode.insertBefore(tk, s);
-        })(document);
+    /* noto sans sc*/
+  (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
 
+  /* noto sans gujarati*/
+  (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+
+   /* freight-text pro*/
+   (function(d) {
+    var config = {
+      kitId: 'cfq7chn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+
+
+        /*cofo sans mono variable*/
         (function(d) {
     var config = {
       kitId: 'cfq7chn',
@@ -56,6 +64,7 @@
     <link rel="icon" type="image/png" href="favicon_studio1ebsite.png">
 
     <style>
+
 
         body {
   display: flex;
@@ -73,7 +82,95 @@
     height: 100%; /* Ensure full height */
     margin: 0; /* Remove any default margins */
   }
-    
+
+
+/* Monitor */
+@media (max-width: 3840px) {
+
+.large-text {
+        font-size: 3.8rem;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .small-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: black;
+        margin: 0;
+      }
+
+
+#image-preview {
+position: absolute;
+width: 31.25rem; /* Adjust width of the preview image */
+height: 15.625rem; 
+background-size: cover;
+background-position: center;
+display: none; /* Initially hidden */
+pointer-events: none; /* Prevent interaction with the image */
+z-index: 1000;
+}
+
+body.memory-index .vertical-bar.right-bar {
+  background-color: #dcf9da;
+  letter-spacing: 0.08rem;
+  width: 7vw;
+}
+
+
+body.memory-index .vertical-bar:hover {
+  background-color: #4940ff; 
+  color: white;
+}
+
+
+.info-box {
+display: flex;
+flex-direction: column;
+background-color: #4940ff;
+color: white;
+padding: 1.25rem;
+position: absolute; /* Allows overlapping */
+top: 60vh; /* Aligns it to the top of its parent */
+left: 31.5vw; /* Aligns it to the left of its parent */
+width: 90%;
+max-width: 25vw;
+z-index: 1000; /* Ensures it appears above other content */
+display: none;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  line-height: 1.5em;
+}
+
+.info-header {
+display: flex;
+justify-content: space-between;
+align-items: center; /* Align text and close button vertically */
+margin-bottom: 0.625rem; /* Add spacing between header and content */
+}
+
+.info-header p {
+font-size: 1.5rem; /* Adjust font size for "Colophon" */
+margin: 0; /* Remove default margin */
+}
+
+.close-box {
+font-size: 1.2rem;
+font-weight: bold;
+cursor: pointer;
+}
+
+.colophon {
+  font-size: 1em; /* Adjust as needed */
+  color: #4940ff;
+  cursor: pointer; 
+}
+
+}
+
+
+
 
 /* Monitor */
 @media (max-width: 3000px) {
@@ -795,6 +892,13 @@ html, body {
 
 
       </style>
+
+  <!-- noto sans korean-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body class="memory-index" id="memory-index" data-memory="index">

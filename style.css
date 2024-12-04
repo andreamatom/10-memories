@@ -6,7 +6,6 @@ html, body {
     overflow-x: hidden;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +13,11 @@ html, body {
 }
 
 
-html.font-loaded {
-    font-family: 'cofo-sans-mono-variable', sans-serif;
+
+html.wf-active body {
+    font-family: "cofo-sans-mono-variable", sans-serif;
 }
+
 
 /* Body */
 body {background-color: #ebebf0;
@@ -158,7 +159,9 @@ body.memory-page-2 .vertical-bar:hover {
 
 /* Memory 3 Page*/
 body.memory-page-3 .main-language {
-    font-family: "noto-sans-cjk-kr", sans-serif;
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 3.8rem; /* Adjust font size if needed */
     font-weight: 400; /* Adjust weight if needed */
     color: black; /* Adjust text color if needed */
@@ -1586,12 +1589,13 @@ font-weight: 400;
 line-height: 1.6; /* Adjust line height for better readability */
 font-size: 1rem; /* Optional: Set a specific font size */}
 
-.korean-typeface { 
-    font-family: "noto-sans-cjk-kr", sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
+.korean-typeface {  
+        font-family: "Noto Sans KR", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
 
 .gujarati-typeface {
     font-family: "noto-sans-gujarati", sans-serif;
