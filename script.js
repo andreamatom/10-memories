@@ -250,7 +250,7 @@ const subtitlesData = {
     { time: 11, sentence: "tinignan ako bilang banta at inisaan", translation: "I was looked at as a threat" },
     { time: 13, sentence: "ako ng mga bago kong kaklase.", translation: "and left alone." },
     { time: 16, sentence: "Naasar daw sila sa akin.", translation: "They said they were pissed at me." },
-    { time: 19.5, sentence: "Hangga’t nakarating sa teacher advisor", translation: "Until it was brought to the teacher advisor." },
+    { time: 19.5, sentence: "Hangga’t nakarating sa teacher advisor", translation: "Until it was brought up to the teacher advisor." },
     { time: 21.5, sentence: "Namin at naisip ng teacher", translation: "We and the teacher came up with the idea." },
     { time: 23.4, sentence: "Magpasa ng papel na hinati pahaba", translation: "Pass a paper divided into lengthwise sections." },
     { time: 26, sentence: "Isang side para isulat ng mga kaklase.", translation: "One side was for my classmates to write." },
