@@ -243,17 +243,34 @@ const subtitlesData = {
 ],
 
 "10": [
-    { time: 0, sentence: "", translation: ""},
-    { time: 4.5, sentence: "", translation: ""},
-    { time: 7, sentence: "", translation: ""},
-    { time: 10, sentence: "", translation: ""},
-    { time: 14.5, sentence: "", translation: ""},
-    { time: 17.5, sentence: "", translation: "" },
-    { time: 22, sentence: "", translation: "" },
-    { time: 26, sentence: "", translation: "" },
-    { time: 29, sentence: "", translation: ""},
-    { time: 31, sentence: "", translation: ""},
-],
+    { time: 0, sentence: "Bibong bibo ako na batang estudyante,", translation: "I was a shy, talkative young student." },
+    { time: 4, sentence: "At sa marami, mabuti ito na katangian.", translation: "And to many, this was a good quality.", image: "clara1.jpg" },
+    { time: 7.5, sentence: "Ngunit nung lumipat ako ng", translation: "But when I moved" },
+    { time: 9, sentence: "eskwelahan pang high school,", translation: "high school," },
+    { time: 11, sentence: "tinignan ako bilang banta at inisaan", translation: "I was looked at as a threat" },
+    { time: 13, sentence: "ako ng mga bago kong kaklase.", translation: "and left alone." },
+    { time: 16, sentence: "Naasar daw sila sa akin.", translation: "They said they were pissed at me." },
+    { time: 19.5, sentence: "Hangga’t nakarating sa teacher advisor", translation: "Until it was brought to the teacher advisor." },
+    { time: 21.5, sentence: "Namin at naisip ng teacher", translation: "We and the teacher came up with the idea." },
+    { time: 23.4, sentence: "Magpasa ng papel na hinati pahaba", translation: "Pass a paper divided into lengthwise sections." },
+    { time: 26, sentence: "Isang side para isulat ng mga kaklase.", translation: "One side was for my classmates to write." },
+    { time: 30, sentence: "Kung anong gusto nila tungkol sakin,", translation: "What they liked about me," },
+    { time: 32, sentence: "At sa kabila anong ayaw nila.", translation: "And on the other side, what they didn’t like." },
+    { time: 35, sentence: "Pinasa itong papel sa buong klase,", translation: "The paper was passed around the class." },
+    { time: 37, sentence: "Habang ako’y pinalabas ng klasrum,", translation: "While I was sent out of the classroom." },
+    { time: 40, sentence: "Nakatayo, naghihintay.", translation: "Standing and waiting." },
+    { time: 43, sentence: "Pagkatapos ay binasa ng teacher", translation: "Afterward, the teacher read aloud." },
+    { time: 45, sentence: "Yung mga nakasulat sa papel.", translation: "What was written on the paper." },
+    { time: 48, sentence: "Naaalala ko pa yung itsura nung papeles –", translation: "I still remember how the paper looked –" },
+    { time: 51, sentence: "Yung isang side, onti, yung kabila, puno.", translation: "One side had little written on it, while the other side was full." },
+    { time: 57, sentence: "Para sa isang doce años,", translation: "For a twelve-year-old," },
+    { time: 59, sentence: "Traumatizing siya.", translation: "It was traumatizing." },
+    { time: 61, sentence: "Kahit na nais kong kalimutan,", translation: "Even though I want to forget it," },
+    { time: 64, sentence: "Nagiwan ito ng malaki na tuldok sa buhay ko.", translation: "It left a significant mark on my life." },
+    { time: 68, sentence: "Iniisip ko nalang na sa kahit anumang grupo,", translation: "I just think that in any group," },
+    { time: 71, sentence: "Wala dapat isang nainiiwan.", translation: "No one should ever be left out." }
+]
+
 
 
 };   
@@ -466,4 +483,3 @@ function showTranscript(id) {
         content.classList.toggle("active");
     }
 }
-
