@@ -69,18 +69,34 @@
         body {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally center */
-  justify-content: center; /* Vertically center */
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  align-items: flex-start;
+  box-sizing: border-box;
+  min-height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margins */
   font-family: 'cofo-sans-mono-variable', sans-serif;
   background-color: #ebebf0;
+  overflow-y: auto; 
+  display: block;
 }
 
         html, body {
-    overflow: hidden; /* Disable scrolling */
     height: 100%; /* Ensure full height */
     margin: 0; /* Remove any default margins */
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    flex: 1; /* Allow main content to grow and take available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  margin-top: 0;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box; /* Include padding in size calculations */
+  overflow: visible; /* Ensure content visibility */
   }
 
 
@@ -174,7 +190,7 @@ body.memory-index .vertical-bar:hover {
 @media (max-width: 1800px) {
 
   .large-text {
-          font-size: 4.1rem;
+          font-size: 3rem;
           line-height: 1.6;
           margin: 0;
         }
@@ -218,8 +234,8 @@ body.memory-index .vertical-bar:hover {
   color: white;
   padding: 1.25rem;
   position: absolute; /* Allows overlapping */
-  top: 62vh; /* Aligns it to the top of its parent */
-  left: 57.5vw; /* Aligns it to the left of its parent */
+  top: 52vh; /* Aligns it to the top of its parent */
+  left: 54vw; /* Aligns it to the left of its parent */
   width: 90%;
   max-width: 30vw;
   z-index: 1000; /* Ensures it appears above other content */
